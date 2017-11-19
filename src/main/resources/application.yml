@@ -1,0 +1,9 @@
+server.port: 9000
+
+couchbase:
+  host: localhost
+  bucket:
+    name: thecuriousdev-demo
+    user:
+      name: <USER>
+      password: <PASSWORD>
