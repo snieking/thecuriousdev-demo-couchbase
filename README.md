@@ -1,5 +1,5 @@
-# thecuriousdev-demo-skeleton
+# thecuriousdev-demo-couchbase
 
-Skeleton project used for blog posts on https://thecuriousdev.org 
+Code containing demos for the Couchbase articles used for blog posts on https://thecuriousdev.org 
 
-Implements a very basic REST service for managing people with an in-memory database.
+The different blogs in the series has different tags.
