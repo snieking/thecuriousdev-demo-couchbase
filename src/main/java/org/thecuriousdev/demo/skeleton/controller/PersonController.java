@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import org.thecuriousdev.demo.skeleton.db.PersonRepository;
 import org.thecuriousdev.demo.skeleton.db.domain.Person;
 
+import javax.validation.constraints.NotNull;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -40,5 +42,11 @@ public class PersonController {
     public ResponseEntity<HttpStatus> deletePerson(@PathVariable String name) {
         personRepository.delete(name);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/person")
+    public ResponseEntity<List<Person>> getPersonsWorkingAtCompanies(@RequestParam @NotNull String company) {
+        List<Person> persons = personRepository.findPeopleWorkingAtCompany(company);
+        return ResponseEntity.ok(persons);
     }
 }
